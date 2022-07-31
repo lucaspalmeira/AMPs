@@ -1,6 +1,6 @@
 # AMPs
 
-> Uso de machine learning para a predição das energias de afinidade entre 
+> Uso de machine learning para a predição das energias de interação de 
 > peptídeos antimicrobianos (WANG, LI, WANG, 2016) frente a Glicoproteína 
 > Spike de Sars-Cov-2.
 
