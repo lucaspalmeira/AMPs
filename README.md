@@ -55,16 +55,12 @@ python manipulate_files.py
 
 ### Referências 
 
-BALABAN, Alexandru T. Highly discriminating distance-based topological index. Chemical Physics Letters, v. 89, n. 5, p. 399–404, 1982.
-
-CHOU, K. C. Prediction of Protein Subcellular Locations by Incorporating Quasi-Sequence-Order Effect. Biochemical and Biophysical Research Communications, v. 278, n. 2, p. 477–483, 19 nov. 2000.
-
-DANISHUDDIN; KHAN, A. U. Descriptors and their selection methods in QSAR analysis: paradigm for drug design. Drug Discovery Today, v. 21, n. 8, p. 1291–1302, 2016.
-
-GRANTHAM, R. Amino Acid Difference Formula to Help Explain Protein Evolution. Science, v. 185, n. 4154, p. 862–864, 6 set. 1974.
-
-HALL, L. H.; KIER, L. B. The Molecular Connectivity Chi Indexes and Kappa Shape Indexes in Structure-Property Modeling. p. 367–422, 5 jan. 2007.
-
-SCHNEIDER, G.; WREDE, P. The rational design of amino acid sequences by artificial neural networks and simulated molecular evolution: de novo design of an idealized leader peptidase cleavage site. Biophysical Journal, v. 66, n. 2 Pt 1, p. 335, 1994.
-
-WANG, G.; LI, X.; WANG, Z. APD3: the antimicrobial peptide database as a tool for research and education. Nucleic Acids Research, v. 44, n. D1, p. D1087–D1093, 4 jan. 2016.
+<div align="justify">
+    <p>BALABAN, Alexandru T. Highly discriminating distance-based topological index. Chemical Physics Letters, v. 89, n. 5, p. 399–404, 1982.<b/></p> 
+    <p>CHOU, K. C. Prediction of Protein Subcellular Locations by Incorporating Quasi-Sequence-Order Effect. Biochemical and Biophysical Research Communications, v. 278, n. 2, p. 477–483, 19 nov. 2000.<b/></p>
+    <p>DANISHUDDIN; KHAN, A. U. Descriptors and their selection methods in QSAR analysis: paradigm for drug design. Drug Discovery Today, v. 21, n. 8, p. 1291–1302, 2016.<b/></p>
+    <p>GRANTHAM, R. Amino Acid Difference Formula to Help Explain Protein Evolution. Science, v. 185, n. 4154, p. 862–864, 6 set. 1974.<b/></p>
+    <p>HALL, L. H.; KIER, L. B. The Molecular Connectivity Chi Indexes and Kappa Shape Indexes in Structure-Property Modeling. p. 367–422, 5 jan. 2007.<b/></p> 
+    <p>SCHNEIDER, G.; WREDE, P. The rational design of amino acid sequences by artificial neural networks and simulated molecular evolution: de novo design of an idealized leader peptidase cleavage site. Biophysical Journal, v. 66, n. 2 Pt 1, p. 335, 1994.<b/></p>
+    <p>WANG, G.; LI, X.; WANG, Z. APD3: the antimicrobial peptide database as a tool for research and education. Nucleic Acids Research, v. 44, n. D1, p. D1087–D1093, 4 jan. 2016.</p>
+</div>
