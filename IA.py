@@ -6,7 +6,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import cross_val_score, KFold
-from Descriptor import Descriptors
 import numpy as np
 import warnings
 
