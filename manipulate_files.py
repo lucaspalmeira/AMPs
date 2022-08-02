@@ -21,7 +21,7 @@ def load_dados(file):
 x, y = load_dados('results_dock.csv')
 
 if __name__ == '__main__':
-    descriptor = Descriptor.Descriptor(x, y)
+    descriptor = Descriptor.Descriptors(x, y)
 
     print("SOCNUMBER (Schneider Wrede matrix)\n")
     x, z = descriptor.socnumber('Schneider_Wrede_matrix')
@@ -36,28 +36,6 @@ if __name__ == '__main__':
 
     print("\nSOCNUMBER (Grantham matrix)\n")
     x, z = descriptor.socnumber('Grantham_matrix')
-    training = IA.Traning(x, z)
-    training.radomflorest()
-    training.svr()
-    training.linear_svr()
-    training.nu_svr()
-    training.linear_regression()
-
-    #################################
-
-    print("\nHibrid (Schneider Wrede matrix)\n")
-    x, z = descriptor.hibrid('Schneider_Wrede_matrix')
-    training = IA.Traning(x, z)
-    training.radomflorest()
-    training.svr()
-    training.linear_svr()
-    training.nu_svr()
-    training.linear_regression()
-
-    #################################
-
-    print("\nHibrid (Grantham matrix)\n")
-    x, z = descriptor.hibrid('Grantham_matrix')
     training = IA.Traning(x, z)
     training.radomflorest()
     training.svr()
