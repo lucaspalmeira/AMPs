@@ -227,38 +227,3 @@ class Descriptors:
                 list_Kappa3.append(None)
         list_Kappa3 = np.reshape(list_Kappa3, (-1, 1))
         return list_Kappa3, self.docking
-
-    def hibrid(self, matrix):
-        # BalabanJ + SOCNumber
-
-        list_hibrid = []
-
-        for seq in self.data:
-
-            d = 1
-            length_seq = len(seq)
-            tau = 0.0
-
-            for i in range(length_seq - d):
-                r_i = self.vector_aminoacids.index(seq[i])
-                r_j = self.vector_aminoacids.index(seq[i + d])
-
-                if matrix == 'Schneider_Wrede_matrix':
-                    distance_aa = self.Schneider_Wrede_matrix[r_i][r_j]
-                else:
-                    distance_aa = self.Grantham_matrix[r_i][r_j]
-
-                tau += distance_aa ** 2
-
-            try:
-                smile = Chem.MolFromSequence(seq)
-                balaban = Dps.BalabanJ(smile)
-                hibrid = tau + balaban
-                list_hibrid.append(hibrid**2)
-
-            except:
-                list_hibrid.append(None)
-
-        list_hibrid = np.reshape(list_hibrid, (-1, 1))
-
-        return list_hibrid, self.docking
