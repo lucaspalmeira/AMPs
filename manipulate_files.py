@@ -17,6 +17,13 @@ def load_dados(file):
 
     return seqs, docking
 
+def preidct(file):
+    list_seqs = []
+    with open(file, 'r') as arq:
+        lines = arq.readlines()
+        for i in lines:
+            list_seqs.append(i.rstrip('\n'))
+    return list_seqs
 
 x, y = load_dados('results_dock.csv')
 
@@ -46,7 +53,7 @@ if __name__ == '__main__':
     #################################
 
     print("\nBalabanJ\n")
-    x, y = descriptor.balabanj()
+    x, y = descriptor.CalcDescRDKit('BalabanJ')
     training = IA.Traning(x, y)
     training.radomflorest()
     training.svr()
@@ -57,7 +64,7 @@ if __name__ == '__main__':
     #################################
 
     print("\nHallKierAlpha\n")
-    x, y = descriptor.hallkieralpha()
+    x, y = descriptor.CalcDescRDKit('HallKierAlpha')
     training = IA.Traning(x, y)
     training.radomflorest()
     training.svr()
@@ -68,7 +75,7 @@ if __name__ == '__main__':
     #################################
 
     print("\nBertzCT\n")
-    x, y = descriptor.BertzCT()
+    x, y = descriptor.CalcDescRDKit('BertzCT')
     training = IA.Traning(x, y)
     training.radomflorest()
     training.svr()
@@ -79,7 +86,7 @@ if __name__ == '__main__':
     #################################
 
     print("\nKappa1\n")
-    x, y = descriptor.Kappa1()
+    x, y = descriptor.CalcDescRDKit('Kappa1')
     training = IA.Traning(x, y)
     training.radomflorest()
     training.svr()
@@ -90,7 +97,7 @@ if __name__ == '__main__':
     #################################
 
     print("\nKappa2\n")
-    x, y = descriptor.Kappa2()
+    x, y = descriptor.CalcDescRDKit('Kappa2')
     training = IA.Traning(x, y)
     training.radomflorest()
     training.svr()
@@ -101,7 +108,7 @@ if __name__ == '__main__':
     #################################
 
     print("\nKappa3\n")
-    x, y = descriptor.Kappa3()
+    x, y = descriptor.CalcDescRDKit('Kappa3')
     training = IA.Traning(x, y)
     training.radomflorest()
     training.svr()

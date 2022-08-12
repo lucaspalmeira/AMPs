@@ -136,6 +136,7 @@ class Descriptors:
 
         self.data = seqs
 
+        self.data_mol = [Chem.MolFromSequence(seq) for seq in seqs]
         self.docking = docking
 
     def socnumber(self, matrix):
@@ -160,70 +161,46 @@ class Descriptors:
 
         return list_socnumber, self.docking
 
-    def balabanj(self):
-        list_balabanj = []
-        for seq in self.data:
-            try:
-                smile = Chem.MolFromSequence(seq)
-                list_balabanj.append(Dps.BalabanJ(smile))
-            except:
-                list_balabanj.append(None)
+    def CalcDescRDKit(self, desc):
+        list_desc = []
 
-        list_balabanj = np.reshape(list_balabanj, (-1, 1))
+        for smile in self.data_mol:
 
-        return list_balabanj, self.docking
+            if desc == 'BalabanJ':
+                try:
+                    list_desc.append(Dps.BalabanJ(smile))
+                except:
+                    list_desc.append(None)
 
-    def hallkieralpha(self):
-        list_hallkieralpha = []
-        for seq in self.data:
-            try:
-                smile = Chem.MolFromSequence(seq)
-                list_hallkieralpha.append(Dps.HallKierAlpha(smile))
-            except:
-                list_hallkieralpha.append(None)
-        list_hallkieralpha = np.reshape(list_hallkieralpha, (-1, 1))
-        return list_hallkieralpha, self.docking
+            elif desc == 'HallKierAlpha':
+                try:
+                    list_desc.append(Dps.HallKierAlpha(smile))
+                except:
+                    list_desc.append(None)
 
-    def BertzCT(self):
-        list_BertzCT = []
-        for seq in self.data:
-            try:
-                smile = Chem.MolFromSequence(seq)
-                list_BertzCT.append(Dps.BertzCT(smile))
-            except:
-                list_BertzCT.append(None)
-        list_BertzCT = np.reshape(list_BertzCT, (-1, 1))
-        return list_BertzCT, self.docking
+            if desc == 'BertzCT':
+                try:
+                    list_desc.append(Dps.BertzCT(smile))
+                except:
+                    list_desc.append(None)
 
-    def Kappa1(self):
-        list_Kappa1 = []
-        for seq in self.data:
-            try:
-                smile = Chem.MolFromSequence(seq)
-                list_Kappa1.append(Dps.Kappa1(smile))
-            except:
-                list_Kappa1.append(None)
-        list_Kappa1 = np.reshape(list_Kappa1, (-1, 1))
-        return list_Kappa1, self.docking
+            elif desc == 'Kappa1':
+                try:
+                    list_desc.append(Dps.Kappa1(smile))
+                except:
+                    list_desc.append(None)
 
-    def Kappa2(self):
-        list_Kappa2 = []
-        for seq in self.data:
-            try:
-                smile = Chem.MolFromSequence(seq)
-                list_Kappa2.append(Dps.Kappa2(smile))
-            except:
-                list_Kappa2.append(None)
-        list_Kappa2 = np.reshape(list_Kappa2, (-1, 1))
-        return list_Kappa2, self.docking
+            elif desc == 'Kappa2':
+                try:
+                    list_desc.append(Dps.Kappa2(smile))
+                except:
+                    list_desc.append(None)
 
-    def Kappa3(self):
-        list_Kappa3 = []
-        for seq in self.data:
-            try:
-                smile = Chem.MolFromSequence(seq)
-                list_Kappa3.append(Dps.Kappa3(smile))
-            except:
-                list_Kappa3.append(None)
-        list_Kappa3 = np.reshape(list_Kappa3, (-1, 1))
-        return list_Kappa3, self.docking
+            elif desc == 'Kappa3':
+                try:
+                    list_desc.append(Dps.Kappa3(smile))
+                except:
+                    list_desc.append(None)
+
+        list_desc = np.reshape(list_desc, (-1, 1))
+        return list_desc, self.docking
